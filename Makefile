@@ -1,4 +1,5 @@
 .PHONY: run
 
+run: target=generator
 run:
-	go run main.go
+	go run examples/${target}/main.go
