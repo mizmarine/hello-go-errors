@@ -1,9 +1,9 @@
 package main
 
 import (
-	"hello-go-errors/lib"
 	"fmt"
 	"github.com/pkg/errors"
+	"hello-go-errors/lib"
 )
 
 func main() {
