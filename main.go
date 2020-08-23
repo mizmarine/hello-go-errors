@@ -3,12 +3,20 @@ package main
 import (
 	"hello-go-errors/lib"
 	"fmt"
+	"github.com/pkg/errors"
 )
 
 func main() {
-	fmt.Println("hello")
+	printSeparater("start")
 
 	if err := lib.GenerateError("error dayo"); err != nil {
-		fmt.Println(err)
+		fmt.Printf("%+v", errors.WithStack(err))
+
+		// これはだめ
+		//fmt.Println(errors.WithStack(err))
 	}
+}
+
+func printSeparater(ctx string) {
+	fmt.Printf("==== %s ====\n", ctx)
 }
